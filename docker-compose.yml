@@ -1,0 +1,39 @@
+version: "3.6"
+
+services:
+  vault191:
+    image: vault:1.9.1
+    container_name: vault191
+    cap_add:
+      - IPC_LOCK
+    ports:
+      - 8200:8200
+    networks:
+      testing_net:
+        ipv4_address: 172.16.238.2
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+      - VAULT_DEV_ROOT_TOKEN_ID=root
+
+  vault186:
+    image: vault:1.8.6
+    container_name: vault186
+    cap_add:
+      - IPC_LOCK
+    ports:
+      - 8220:8200
+    networks:
+      testing_net:
+        ipv4_address: 172.16.238.5
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+      - VAULT_DEV_ROOT_TOKEN_ID=root
+
+networks:
+  testing_net:
+    name: testing_net
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.16.238.0/24

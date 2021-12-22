@@ -1,0 +1,61 @@
+# Vaultron LDAP Example LDIF
+#
+# Add with `ldapadd -cxWD "cn=admin,dc=vaultron,dc=waves" -f vaultron.ldif`
+
+
+
+dn: ou=otherusers,dc=vaultron,dc=waves
+objectClass: organizationalunit
+objectClass: top
+ou: otherusers
+description: otherusers
+
+
+dn: cn=akn,ou=otherusers,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=users,ou=groups,dc=vaultron,dc=waves
+userPassword: test
+
+dn: cn=akn1,ou=users,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=users,ou=groups,dc=vaultron,dc=waves
+userPassword: test
+
+
+dn: cn=akn2,ou=users,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=users,ou=groups,dc=vaultron,dc=waves
+userPassword: test
+
+dn: cn=akn3,ou=users,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=users,ou=groups,dc=vaultron,dc=waves
+userPassword: test
+
+dn: cn=akn4,ou=users,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=users,ou=groups,dc=vaultron,dc=waves
+userPassword: test
+
+dn: cn=akn5,ou=users,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=users,ou=groups,dc=vaultron,dc=waves
+userPassword: test

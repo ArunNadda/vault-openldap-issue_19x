@@ -1,0 +1,14 @@
+# Vaultron LDAP Example LDIF
+dn: cn=new,ou=groups,dc=vaultron,dc=waves
+objectClass: groupofnames
+objectClass: top
+description: testing group for test
+cn: new
+member: cn=ann,ou=users,dc=vaultron,dc=waves
+
+dn: cn=ann,ou=users,dc=vaultron,dc=waves
+objectClass: person
+objectClass: top
+cn: vaultron
+sn: vaultron
+memberOf: cn=new,ou=groups,dc=vaultron,dc=waves
