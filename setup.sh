@@ -12,6 +12,8 @@ docker run \
   -p 636:636 \
   osixia/openldap:latest
 
+# sleep for 10 sec
+sleep 10
 
 # populate ldap
 ldapadd -cxD "cn=admin,dc=vaultron,dc=waves" -f ./ldap/vaultron.ldif -w vaultron
